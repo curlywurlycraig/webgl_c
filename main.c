@@ -8,10 +8,6 @@
 #include <stdio.h>
 #include "shaders.c"
 
-#define bool int
-#define true 1
-#define false 0
-
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 
@@ -19,8 +15,8 @@ GLuint programObject;
 SDL_Surface* screen;
 
 GLfloat vVertices[] = {
-	0.0f, 0.5f, 0.0f,
-	-0.5f, -0.5f, 0.0f,
+   	0.0f, 0.5f, 1.0f,
+	-0.5f, -0.5f, -1.0f,
 	0.5f, -0.5f, 0.0f
 };
 
@@ -37,8 +33,6 @@ int init() {
         printf("Failed to init SDL: %s", SDL_GetError());
 		return 0;
 	}
-
-	// SDL initialised successfully, now load shaders and geometry
 
 	const char vertexShaderSource[] =
 		"attribute vec4 vPosition;		                     \n"

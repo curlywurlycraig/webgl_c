@@ -8,10 +8,15 @@
         body {
             background-color: black;
         }
+
+        #canvas {
+            width: 400px;
+            height: 300px;
+        }
     </style>
   </head>
   <body>
-    <canvas style="width: 400px; height: 300px" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+    <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
     <script type='text/javascript'>
       var statusElement = document.getElementById('status');
       var progressElement = document.getElementById('progress');
